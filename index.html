@@ -30,10 +30,25 @@
       align-items: center;
     }
 
-    .logo {
+    /* Container for logo + text brand */
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 0.75em; /* space between logo and text */
+    }
+
+    /* Make the header logo round */
+    .fomo-logo {
+      height: 50px; 
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover; /* ensures the image fills the circle nicely */
+    }
+
+    .logo-text {
       font-weight: bold;
       font-size: 1.2em;
-      color: #fff; /* Ensure the logo text is white to stand out */
+      color: #fff; /* Ensure the text is white for contrast */
     }
 
     nav ul {
@@ -61,6 +76,15 @@
       margin-bottom: 2em;
     }
 
+    /* Logo in the hero before Selamat Datang */
+    .hero-fomo-logo {
+      width: 400px; 
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1em;
+    }
+
     .hero h1 {
       font-size: 2.5em;
       margin-bottom: 0.5em;
@@ -69,7 +93,7 @@
     .hero p {
       font-size: 1.1em;
       margin: 1em auto;
-      max-width: 600px; /* Keep the text nicely contained */
+      max-width: 600px; /* Keep text contained */
       line-height: 1.5em;
       color: #333; /* Dark text for readability on white background */
     }
@@ -88,7 +112,6 @@
     }
 
     .cta-button:hover {
-      /* Slightly different shade on hover */
       background-color: #6A35C5;
     }
 
@@ -102,7 +125,7 @@
     }
 
     .feature-box {
-      background: #fff; /* Keep product boxes white to stand out */
+      background: #fff;
       padding: 2em;
       border-radius: 4px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -124,7 +147,7 @@
     .feature-box h3 {
       margin-bottom: 0.5em;
       font-size: 1.25em;
-      color: #2D2B3C; /* Darker text for headings in feature boxes */
+      color: #2D2B3C;
     }
 
     .feature-box p {
@@ -151,7 +174,11 @@
 </head>
 <body>
   <header>
-    <div class="logo">Dagangan Fomo</div>
+    <div class="logo-section">
+      <img src="logo.png" alt="FOMO Business Logo" class="fomo-logo">
+      <div class="logo-text">Dagangan Fomo</div>
+    </div>
+    
     <nav>
       <ul>
         <li>Home</li>
@@ -164,11 +191,15 @@
 
   <!-- Hero / Main Description Section -->
   <section class="hero">
+    <!-- FOMO logo before Selamat Datang -->
+    <img src="logo.png" alt="FOMO Logo" class="hero-fomo-logo">
     <h1>Selamat Datang di Dagangan Fomo</h1>
     <p>
-      Bisnis kami menawarkan keyboard mekanikal yang dapat dikustomisasi sesuai dengan preferensi pengguna, termasuk pilihan switch, keycaps, dan desain casing. 
-      Kemudian bisnis kami juga berfokus pada kuliner dimsum berkualitas tinggi dengan berbagai varian rasa yang cocok untuk semua kalangan, serta minuman segar berbasis sirup mangga 
-      yang dikombinasikan dengan Yakult untuk memberikan rasa manis dan asam yang menyegarkan.
+      Bisnis kami menawarkan keyboard mekanikal yang dapat dikustomisasi sesuai dengan preferensi pengguna, 
+      termasuk pilihan switch, keycaps, dan desain casing. 
+      Kemudian bisnis kami juga berfokus pada kuliner dimsum berkualitas tinggi dengan berbagai varian rasa yang 
+      cocok untuk semua kalangan, serta minuman segar berbasis sirup mangga yang dikombinasikan dengan Yakult 
+      untuk memberikan rasa manis dan asam yang menyegarkan.
     </p>
     <button class="cta-button">Mulai Belanja</button>
   </section>
@@ -204,6 +235,17 @@
         Es Mango Yakult adalah minuman segar berbahan dasar mangga yang dikombinasikan dengan Yakult, 
         menghasilkan rasa manis dan asam yang menyegarkan. Biasanya disajikan dengan es dan topping seperti 
         nata de coco atau jelly.
+      </p>
+    </div>
+
+    <!-- Choco Milo Cream -->
+    <div class="feature-box">
+      <img src="milo.png" alt="A glass of Choco Milo Cream">
+      <h3>Choco Milo Cream</h3>
+      <p>
+        Choco Milo Cream adalah varian minuman cokelat yang memadukan kelezatan Milo dengan krim lembut, 
+        menghasilkan sensasi rasa cokelat yang kental dan nikmat. Minuman ini dapat disajikan dingin dengan 
+        tambahan es, atau hangat untuk menghangatkan tubuh. Cocok sebagai pelepas dahaga sekaligus pemanja lidah!
       </p>
     </div>
   </section>
